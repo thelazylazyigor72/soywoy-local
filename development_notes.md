@@ -1,0 +1,1 @@
+I putted auth_question in .env cuz we need to store it somewhere, and i think .env is the best place we have. Obviously we could hard code it within client-side, but to store it in .env seems like a better idea. 
