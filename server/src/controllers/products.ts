@@ -12,7 +12,7 @@ import { Error as MongoError } from "mongoose";
 // getAllProducts controller
 // ? in fact - get all active products, not mention it within path
 // ? cuz of security reasons, if that make sense o_o
-export const getAllProducts = async (
+export const getAllActiveProducts = async (
 	req: Request<unknown, IBackendResponse, Product, unknown>,
 	res: Response<IBackendResponse>,
 	next: NextFunction,
