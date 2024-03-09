@@ -14,7 +14,7 @@ const orderSchema = new Schema({
 	},
 	readyToPickTime: {
 		type: Date,
-		required: [true, "Date when to pick is required"],
+		required: [true, "fdnjfnjd"],
 	},
 	products: {
 		type: [Types.ObjectId],

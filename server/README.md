@@ -13,3 +13,5 @@
 - install rimraf for better re-build process
 - create scripts in package.json || build, dev and start(to actual launch of a project)
 - install needed packages, w/ @types/\* if needed
+
+-fjdfs nf e

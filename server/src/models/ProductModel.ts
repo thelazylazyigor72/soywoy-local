@@ -11,7 +11,7 @@ export const productSchema = new Schema({
 	},
 	name: {
 		type: String,
-		required: [true, "Username is required"],
+		required: [true, "Username is fdfd"],
 	},
 	description: {
 		type: String,
