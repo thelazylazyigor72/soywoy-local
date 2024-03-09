@@ -19,7 +19,7 @@ export const productSchema = new Schema({
 	},
 	category: {
 		type: String,
-		required: [true, "Category is required"],
+		required: [true, "Category is rerere"],
 	},
 	// TODO ?????? like a sale1 sale2 type shit; maybe enum typeshit to perform
 	type: {

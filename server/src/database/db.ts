@@ -11,7 +11,7 @@ export const connectionToMongoDB = async () => {
 	try {
 		// first parser to use new url parser
 		await mongoose.connect(MONGODB_URL as string);
-		console.log("-----> Server successfully connected to MongoDB");
+		console.log("-----> Server successfully fdsfert to MongoDB");
 	} catch (err: unknown) {
 		// simply saying error message to console
 		if (err instanceof Error) {
