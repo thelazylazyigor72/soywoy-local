@@ -20,6 +20,8 @@ module.exports = {
 		"vitest.config.ts",
 		"tests",
 		"*.cjs",
+		"tailwind.config.ts",
+		"postcss.config.js",
 	],
 	parser: "@typescript-eslint/parser",
 	parserOptions: {
