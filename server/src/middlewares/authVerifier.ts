@@ -32,7 +32,7 @@ export const userVerification = async (
 					success: false,
 					message: "",
 					data: {},
-					errorMessage: `Failed to authentificate, ${err.message}, try to login or signup again.`,
+					errorMessage: `Failed to authentificate, ${err.message}, try to login or signup.`,
 				});
 			}
 		} else {

@@ -27,13 +27,21 @@ const userSchema = new Schema({
 		type: Boolean,
 		required: [true, "User role field is required"],
 	},
+	// orders: {
+	// 	type: Boolean,
+	// 	required: [false],
+	// },
+	// requests: {
+	// 	type: Boolean,
+	// 	required: [false],
+	// },
 });
 
 // according to mongoose docs thats how we get a type from schema
 export type User = InferSchemaType<typeof userSchema> &
 	Document<Types.ObjectId, any, User>;
 
-// obvious pre-middleware-ish stuff to hash passed passwerd when we save this models document
+// obvious pre-middleware-ish stuff to hash passed password when we save this models document
 userSchema.pre("save", async function () {
 	this.password = await bcrypt.hash(this.password, 12);
 });

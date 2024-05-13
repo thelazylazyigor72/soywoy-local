@@ -1,5 +1,5 @@
 // ! Imports
-// import our express module and other needed stuff-builtin interfaces
+// import express module and other needed stuff like a build-in interfaces
 import express, { Express, Request, Response } from "express";
 // import swagger related stuff
 import swagger, { SwaggerOptions, SwaggerUiOptions } from "swagger-ui-express";
@@ -29,11 +29,10 @@ const app: Express = express();
 
 // ? Middlewares - functions that executes between http actions
 
-// CORS middleware, i dont think its required in my app, but just in case, and just to try it out
 // * not allowing requests from other domains, no specified server response header written
 app.use(
 	cors({
-		origin: [`http://localhost:${port}`, "http://localhost:3000"],
+		origin: ["http://localhost:3000"], // allowing frontend to request backend
 		methods: ["GET", "POST", "PUT", "DELETE"],
 		credentials: true,
 	}),
@@ -85,8 +84,9 @@ const swaggerSpec = swaggerJSDoc(swaggerOptions);
 app.use("/api-docs", swagger.serve, swagger.setup(swaggerSpec, options));
 
 // ? End Of Middlewares
+
 // ! Routes initialization
-// note, im useing it w/ /api, in case of usage of static files
+// note, im useing it w/ /api
 
 // defining auth router
 app.use("/api", authRouter);
@@ -94,9 +94,9 @@ app.use("/api", authRouter);
 app.use("/api/products", productsRouter);
 // ! End of Routes initialization
 
-// server-up checker
+// server-up checker (dummy endpoint)
 app.get("/", (req: Request, res: Response) => {
-	res.send("Express + TypeScript Server");
+	res.send("Express + TypeScript Server is Alive");
 });
 
 // create connection to mongodb

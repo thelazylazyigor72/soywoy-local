@@ -8,7 +8,7 @@ import bcrypt from "bcryptjs";
 // types
 import { IBackendResponse, IJWTPayload } from "../types/interfaces.js";
 // jwt
-import jwt, { JsonWebTokenError } from "jsonwebtoken";
+import jwt from "jsonwebtoken";
 // get env var
 import dotenv from "dotenv";
 dotenv.config({ path: ".././.env" });
@@ -235,7 +235,7 @@ export const DeleteAccount = async (
 			});
 			next();
 		} catch (error: unknown) {
-			if (error instanceof JsonWebTokenError) {
+			if (error instanceof Error) {
 				return res.status(409).json({
 					success: false,
 					message: "",

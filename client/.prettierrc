@@ -1,0 +1,11 @@
+{
+	"tabWidth": 4,
+	"trailingComma": "none",
+	"useTabs": true,
+	"semi": true,
+	"singleQuote": false,
+	"tailwindConfig": "./tailwind.config.ts",
+	"tailwindAttributes": ["wrapperClassName", "wrapClassName", "rootClassName"],
+	"tailwindFunctions": ["classNames", "classnames"],
+	"plugins": ["prettier-plugin-tailwindcss"]
+}
