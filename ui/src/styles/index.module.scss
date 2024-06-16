@@ -1,0 +1,40 @@
+@import "responsiveness.module.scss";
+@import "variables.module.scss";
+@import "mixins.module.scss";
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	&::after,
+	&::before {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	&::selection {
+		background: #ff7d29;
+	}
+}
+
+html {
+	font-size: 18px;
+	@include xs {
+		font-size: 15px;
+	}
+	@include sm {
+		font-size: 16.5px;
+	}
+	@include md {
+		font-size: 17px;
+	}
+	@include lg {
+		font-size: 17.5px;
+	}
+	@include xl {
+		font-size: 18px;
+	}
+}
