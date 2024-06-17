@@ -33,5 +33,16 @@ module.exports = {
 	plugins: ["react", "@typescript-eslint", "prettier"],
 	rules: {
 		"react/function-component-definition": "off",
+		"import/extensions": [
+			"error",
+			"ignorePackages",
+			{
+				"": "never",
+				js: "never",
+				jsx: "never",
+				ts: "never",
+				tsx: "never",
+			},
+		],
 	},
 };

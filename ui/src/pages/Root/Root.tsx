@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Divider, Layout, Menu, Tooltip, Typography } from "antd";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { GithubOutlined } from "@ant-design/icons";
+import navigationLinks from "data/Menu";
 import style from "./root.module.scss";
-import navigationLinks from "../../data/Menu";
 
 // ? maybe adding here either themeswitcher or scrolltotop buttons
 // ? TODO Logo or smth w/ or instead of heading

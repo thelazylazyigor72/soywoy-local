@@ -2,10 +2,10 @@ import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { ConfigProvider } from "antd";
+import Root from "pages/Root/Root";
+import ErrorPage from "pages/ErrorPage";
+import Home from "pages/Home";
 // import { SeedToken } from "antd/es/theme/internal";
-import Root from "./pages/Root/Root";
-import ErrorPage from "./pages/ErrorPage";
-import Home from "./pages/Home";
 
 // const lightToken: Partial<SeedToken> = {
 // 	colorPrimary: "#ff7d29",
