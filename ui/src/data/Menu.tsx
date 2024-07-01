@@ -2,6 +2,7 @@ import React from "react";
 import {
 	AppstoreOutlined,
 	HomeOutlined,
+	LoginOutlined,
 	LogoutOutlined,
 	MehOutlined,
 	ShoppingCartOutlined,
@@ -51,6 +52,18 @@ const navigationLinks: NavigationLink[] = [
 		label: "Logout",
 		path: "/logout",
 		icon: <LogoutOutlined />,
+	},
+	{
+		id: 7,
+		label: "Login",
+		path: "/login",
+		icon: <LoginOutlined />,
+	},
+	{
+		id: 8,
+		label: "SignUp",
+		path: "/signup",
+		icon: <LoginOutlined />,
 	},
 ];
 

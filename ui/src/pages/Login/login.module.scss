@@ -1,0 +1,30 @@
+@import "styles/mixins.module.scss";
+
+.content {
+	min-width: 100%;
+	width: 100%;
+	min-height: 100vh;
+	@include flexbase(row, center, center);
+	.main {
+		width: 40%;
+		height: fit-content;
+		@include flexbase(row, center, center);
+		border: 1px solid gainsboro;
+		border-radius: 1rem;
+		padding: 1rem;
+		.header {
+			text-align: center;
+			align-self: center;
+		}
+		.form {
+			width: 100%;
+			@include flexbase(column, center, start);
+			.item {
+				width: 100%;
+			}
+			.submit {
+				align-self: flex-end;
+			}
+		}
+	}
+}

@@ -2,9 +2,12 @@ import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { ConfigProvider } from "antd";
+import { StyleProvider } from "@ant-design/cssinjs";
 import Root from "pages/Root/Root";
 import ErrorPage from "pages/ErrorPage";
 import Home from "pages/Home";
+import Login from "pages/Login/Login";
+import SignUp from "pages/SignUp/SignUp";
 // import { SeedToken } from "antd/es/theme/internal";
 
 // const lightToken: Partial<SeedToken> = {
@@ -44,6 +47,14 @@ function App() {
 							element: <Home />,
 						},
 						{
+							path: "/login",
+							element: <Login />,
+						},
+						{
+							path: "/signup",
+							element: <SignUp />,
+						},
+						{
 							path: "/catalog",
 							element: <h1>g</h1>,
 						},
@@ -79,7 +90,12 @@ function App() {
 					},
 				}}
 			>
-				<RouterProvider future={{ v7_startTransition: true }} router={router} />
+				<StyleProvider>
+					<RouterProvider
+						future={{ v7_startTransition: true }}
+						router={router}
+					/>
+				</StyleProvider>
 			</ConfigProvider>
 		</AnimatePresence>
 	);

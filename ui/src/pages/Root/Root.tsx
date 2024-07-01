@@ -20,18 +20,27 @@ function Root() {
 	}, []);
 
 	return (
-		<Layout className={`${style.layout}`}>
+		<Layout hasSider className={`${style.layout}`}>
 			<Sider
 				className={`${style.sider}`}
 				collapsible
 				collapsed={collapse}
 				onCollapse={() => setCollapse(!collapse)}
+				style={{
+					overflow: "auto",
+					height: "100vh",
+					position: "fixed",
+					left: 0,
+					top: 0,
+					bottom: 0,
+				}}
 			>
-				<Typography.Title level={3}>
+				<Typography.Title className={`${style.header}`} level={3}>
 					SW{collapse ? "" : "store"}
 				</Typography.Title>
 				<Divider />
 				<Menu
+					mode="inline"
 					className={`${style.menu}`}
 					activeKey={location.pathname}
 					selectedKeys={[location.pathname]}
@@ -55,7 +64,12 @@ function Root() {
 					{collapse ? "" : "@thelazylazyigor"}
 				</Typography.Link>
 			</Sider>
-			<Content className={`${style.content}`}>
+			<Content
+				style={{
+					marginLeft: collapse ? "" : "200px",
+				}}
+				className={`${style.content}`}
+			>
 				<Outlet />
 			</Content>
 		</Layout>
