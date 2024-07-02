@@ -65,6 +65,12 @@ const navigationLinks: NavigationLink[] = [
 		path: "/signup",
 		icon: <LoginOutlined />,
 	},
+	{
+		id: 9,
+		label: "RestorePassword",
+		path: "/restorepassword",
+		icon: <LoginOutlined />,
+	},
 ];
 
 export default navigationLinks;

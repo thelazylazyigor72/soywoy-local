@@ -8,6 +8,7 @@ import ErrorPage from "pages/ErrorPage";
 import Home from "pages/Home";
 import Login from "pages/Login/Login";
 import SignUp from "pages/SignUp/SignUp";
+import PasswordRestore from "pages/PasswordRestore/PasswordRestore";
 // import { SeedToken } from "antd/es/theme/internal";
 
 // const lightToken: Partial<SeedToken> = {
@@ -53,6 +54,10 @@ function App() {
 						{
 							path: "/signup",
 							element: <SignUp />,
+						},
+						{
+							path: "/restorepassword",
+							element: <PasswordRestore />,
 						},
 						{
 							path: "/catalog",

@@ -45,6 +45,7 @@ const Login = () => {
 						</Typography.Title>
 						<Form.Item<FieldType>
 							name="username"
+							label="Enter username"
 							tooltip="This is required field"
 							className={`${style.item}`}
 							rules={[
@@ -59,6 +60,7 @@ const Login = () => {
 
 						<Form.Item<FieldType>
 							name="password"
+							label="Enter a password"
 							tooltip="This is required field"
 							className={`${style.item}`}
 							rules={[

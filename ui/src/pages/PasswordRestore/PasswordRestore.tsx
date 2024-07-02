@@ -1,24 +1,18 @@
 import { Button, Form, FormProps, Input, Layout, Typography } from "antd";
 import React from "react";
-import {
-	LockOutlined,
-	QuestionOutlined,
-	UserOutlined,
-} from "@ant-design/icons";
-import style from "./signup.module.scss";
+import { LockOutlined, UserOutlined } from "@ant-design/icons";
+import style from "./passwordrestore.module.scss";
 
 type FieldType = {
 	username?: string;
-	password?: string;
-	securityQuestion?: string;
+	securityAnswer?: string;
 };
 
 // todo разобраться зачем методы онФиниш
 // ? remember me - будем ли реализовывать
 // todo собрать фичи с документации, без лишнего
 
-const SignUp = () => {
-	console.log(import.meta.env.VITE_AUTH_QUESTION);
+const PasswordRestore = () => {
 	const { Content } = Layout;
 
 	const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
@@ -46,11 +40,11 @@ const SignUp = () => {
 						autoComplete="off"
 					>
 						<Typography.Title className={`${style.header}`}>
-							SignUp
+							Password Change
 						</Typography.Title>
 						<Form.Item<FieldType>
 							name="username"
-							label="Enter username"
+							label="Declare username"
 							tooltip="This is required field"
 							className={`${style.item}`}
 							rules={[
@@ -64,22 +58,7 @@ const SignUp = () => {
 						</Form.Item>
 
 						<Form.Item<FieldType>
-							name="password"
-							label="Enter a password"
-							tooltip="This is required field"
-							className={`${style.item}`}
-							rules={[
-								{ required: true, message: "Please input your password!" },
-							]}
-						>
-							<Input.Password
-								placeholder="Password"
-								prefix={<LockOutlined className="site-form-item-icon" />}
-							/>
-						</Form.Item>
-
-						<Form.Item<FieldType>
-							name="securityQuestion"
+							name="securityAnswer"
 							label={import.meta.env.VITE_AUTH_QUESTION}
 							tooltip="This is required field"
 							className={`${style.item}`}
@@ -88,8 +67,8 @@ const SignUp = () => {
 							]}
 						>
 							<Input
-								placeholder="Answer her"
-								prefix={<QuestionOutlined className="site-form-item-icon" />}
+								placeholder="Answer here"
+								prefix={<LockOutlined className="site-form-item-icon" />}
 							/>
 						</Form.Item>
 
@@ -110,4 +89,4 @@ const SignUp = () => {
 	);
 };
 
-export default SignUp;
+export default PasswordRestore;
