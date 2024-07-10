@@ -16,7 +16,7 @@
 
 		/* Linting */
 		"strict": true,
-		"noUnusedLocals": true,
+		"noUnusedLocals": false,
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true,
 
@@ -30,6 +30,6 @@
 			"utils/*": ["utils/*"]
 		}
 	},
-	"include": [".eslintrc.cjs", "src"],
+	"include": [".eslintrc.cjs", "src", "jest.setup.ts", "jest.config.js"],
 	"references": [{ "path": "./tsconfig.node.json" }]
 }
